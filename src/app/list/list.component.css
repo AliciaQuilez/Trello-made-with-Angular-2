@@ -1,0 +1,11 @@
+.list{
+    padding:0 10% 0 2%;
+    width: 300px;
+    box-sizing: border-box;
+}
+.headerList{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}

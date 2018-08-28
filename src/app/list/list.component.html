@@ -1,0 +1,17 @@
+<div class="list">
+  <div class="headerList">
+  <h1>
+    {{list.name}}
+  </h1>
+  <button (click) = "deleteListComp(list)"> X </button>
+</div>
+<div class="tasksList">
+  <task [task]="task" 
+        [currentList] ="list"
+        *ngFor="let task of list.tasks">
+      </task>
+    </div>
+
+  <input [(ngModel)]="taskName">
+  <button (click)="addNewTask(taskName,list)">Add</button>
+</div>

@@ -1,5 +1,10 @@
 <header class="addListWrapper">
-  <input [(ngModel)]="add_list">
-  <button (click)="addList()">Add</button>
+  <input [(ngModel)]="listName">
+  <button (click)="addNewList(listName)">Add</button>
 </header>
-<section class="lists"></section>
+
+<div class="lists">
+<list [list]="list"
+      *ngFor="let list of lists" >
+    </list>
+  </div>

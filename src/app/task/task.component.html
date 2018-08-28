@@ -1,0 +1,15 @@
+<div class="task">
+  <p [hidden]="editing" 
+    (click)="startEditing(editBox)">
+    {{task.name}}
+  </p>
+
+  <input [hidden]="!editing"
+          #editBox
+          class="editText"
+          [(ngModel)]="task.name"
+          (keyup.enter)="finishEditing()"
+          (blur)="finishEditing()">
+
+  <button (click) = "deleteTaskComp(task, currentList.tasks)"> X </button>
+</div>
