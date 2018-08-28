@@ -14,7 +14,7 @@
   </div>
 
   <div class="input-add">
-    <input [(ngModel)]="taskName" (keyup.enter)="addNewTask(taskName,list)">
+    <input [(ngModel)]="taskName" (keyup.enter)="addNewTask(taskName,list)"  placeholder="New Task">
     <button mat-icon-button (click)="addNewTask(taskName,list)">
       <mat-icon>send</mat-icon>
     </button>

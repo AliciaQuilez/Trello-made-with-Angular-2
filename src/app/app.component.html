@@ -1,5 +1,5 @@
 <header class="addListWrapper">
-  <input [(ngModel)]="listName" (keyup.enter)="addNewList(listName)">
+  <input [(ngModel)]="listName" (keyup.enter)="addNewList(listName)" placeholder="Create a new List">
   <button mat-icon-button (click)="addNewList(listName)">
     <mat-icon>send</mat-icon>
   </button>
