@@ -1,15 +1,17 @@
-<div class="task">
-  <p [hidden]="editing" 
-    (click)="startEditing(editBox)">
+<mat-card>
+  <p [hidden]="editing" (click)="startEditing(editBox)">
     {{task.name}}
   </p>
 
-  <input [hidden]="!editing"
-          #editBox
-          class="editText"
-          [(ngModel)]="task.name"
-          (keyup.enter)="finishEditing()"
-          (blur)="finishEditing()">
+  <input [hidden]="!editing" #editBox class="editText" [(ngModel)]="task.name" (keyup.enter)="finishEditing()" (blur)="finishEditing()">
 
-  <button (click) = "deleteTaskComp(task, currentList.tasks)"> X </button>
-</div>
+  <mat-card-actions>
+    <button mat-icon-button (click)="deleteTaskComp(task, currentList.tasks)">
+      <mat-icon>delete</mat-icon>
+    </button>
+    <button mat-icon-button (click)="startEditing(editBox)">
+      <mat-icon>create</mat-icon>
+    </button>
+  </mat-card-actions>
+
+</mat-card>

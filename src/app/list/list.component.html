@@ -1,17 +1,22 @@
 <div class="list">
   <div class="headerList">
-  <h1>
-    {{list.name}}
-  </h1>
-  <button (click) = "deleteListComp(list)"> X </button>
-</div>
-<div class="tasksList">
-  <task [task]="task" 
-        [currentList] ="list"
-        *ngFor="let task of list.tasks">
-      </task>
-    </div>
+    <h1>
+      {{list.name}}
+    </h1>
 
-  <input [(ngModel)]="taskName">
-  <button (click)="addNewTask(taskName,list)">Add</button>
+    <button mat-icon-button (click)="deleteListComp(list)">
+      <mat-icon>clear</mat-icon>
+    </button>
+  </div>
+  <div class="tasksList">
+    <task [task]="task" [currentList]="list" *ngFor="let task of list.tasks">
+    </task>
+  </div>
+
+  <div class="input-add">
+    <input [(ngModel)]="taskName" (keyup.enter)="addNewTask(taskName,list)">
+    <button mat-icon-button (click)="addNewTask(taskName,list)">
+      <mat-icon>send</mat-icon>
+    </button>
+  </div>
 </div>

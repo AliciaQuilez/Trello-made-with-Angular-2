@@ -1,10 +1,11 @@
 <header class="addListWrapper">
-  <input [(ngModel)]="listName">
-  <button (click)="addNewList(listName)">Add</button>
+  <input [(ngModel)]="listName" (keyup.enter)="addNewList(listName)">
+  <button mat-icon-button (click)="addNewList(listName)">
+    <mat-icon>send</mat-icon>
+  </button>
 </header>
 
 <div class="lists">
-<list [list]="list"
-      *ngFor="let list of lists" >
-    </list>
-  </div>
+  <list [list]="list" *ngFor="let list of lists">
+  </list>
+</div>

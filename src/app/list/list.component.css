@@ -1,11 +1,21 @@
-.list{
-    padding:0 10% 0 2%;
-    width: 300px;
-    box-sizing: border-box;
+.list {
+  padding: 0 10% 0 2%;
+  width: 300px;
+  box-sizing: border-box;
 }
-.headerList{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
+
+.headerList {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.input-add {
+  display: flex;
+  flex-direction: row;
+}
+
+.input-add input {
+  flex: 1;
 }

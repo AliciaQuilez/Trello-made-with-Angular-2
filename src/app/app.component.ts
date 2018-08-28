@@ -19,5 +19,6 @@ export class AppComponent {
 
   addNewList(){
     this.serv.addList(this.listName);
+    this.listName = '';
   }
 }

@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+
+*{
+    font-family: 'Noto Sans', sans-serif;
+}
+
+input{
+    border: none;
+    border-bottom: 1px solid grey;
+}
+input:focus{
+    
+    border-bottom: 2px solid blue;
+    outline-offset: 0px;
+    outline: 0;
+}

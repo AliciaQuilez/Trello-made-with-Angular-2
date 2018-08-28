@@ -9,31 +9,30 @@ import { DataService } from '../data.service';
 })
 export class TaskComponent implements OnInit {
 
-  @Input() task : Task;
+  @Input() task: Task;
   @Input() currentList;
   serv: DataService;
   editing: boolean = false;
 
   constructor(serv: DataService) {
     this.serv = serv;
-   }
-
-  ngOnInit() {
   }
 
-  deleteTaskComp(task, currentList){
+  ngOnInit() {}
+
+  deleteTaskComp(task, currentList) {
     this.serv.deleteTask(task, currentList);
   }
 
 
-  startEditing(input){
+  startEditing(input) {
     this.editing = true;
     input.focus();
   }
 
-  finishEditing(){
+  finishEditing() {
     this.editing = false;
     this.serv.save();
   }
-  
+
 }
